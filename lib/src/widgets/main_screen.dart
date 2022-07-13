@@ -20,8 +20,16 @@ class MainScreen extends ConsumerWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.all(16.0),
-          child:
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Spacer(),
               Stack(children: const [QuestionAnswerWidget(), ResultWidget()]),
+              const Spacer(),
+              const Text(
+                  "Note: This is meant to help you with your decision and won't give you a final best answer!")
+            ],
+          ),
         ),
       ),
     );
